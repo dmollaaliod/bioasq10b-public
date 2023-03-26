@@ -12,30 +12,31 @@ participation in BioASQ 10b.
 Apart from the code in this repository, you will need the following files:
 
 * `training10b.json` - available from [BioASQ](http://www.bioasq.org/)
-* `rouge_10b.csv` - you can create it by running the following overnight:
-```
->>> from classificationneural import saveRouge
->>> saveRouge('training10b.json', 'rouge_10b.csv',
+* [`rouge_10b.csv`](https://drive.google.com/file/d/1OD8fY6vzjqChr7g_AUciANubvlzVr7fB/view?usp=share_link)
+
+    You can also create it by running the following overnight:
+    ```
+    >>> from classificationneural import saveRouge
+    >>> saveRouge('training10b.json', 'rouge_10b.csv',
                snippets_only = True)
-```
+    ```
 
 Read the file `Dockerfile` for an idea of how to install the dependencies and
 set up the system.
 
 ## Reading
 
-* If you use this code, please cite the following paper:
+If you use this code, please cite the following paper:
 
-D. Mollá (2022). Query-Focused Extractive Summarisation for Biomedical and COVID-19 Question Answering. *CLEF2022 Working Notes*.
+D. Mollá (2022). Query-Focused Extractive Summarisation for Biomedical and COVID-19 Question Answering. *CLEF2022 Working Notes*. [[Proceedings version](https://ceur-ws.org/Vol-3180/paper-21.pdf)] [[Arxiv version](https://arxiv.org/abs/2209.01815)]
 
 ## Examples of runs using pre-learnt models
 
-To get the pre-learnt models used in the BioASQ10b runs, please email
-diego.molla-aliod@mq.edu.au. The following models are available:
+The following models are available:
 
-* task8b_distilbert_model_32.pt - for neural classification with DistilBERT and all BioASQ10b training data
+* [`task10b_distilbert_model_32.pt`](https://drive.google.com/file/d/1XQxnHt8fCo7SKgtV7KYCtOT3sgiZp-h6/view?usp=share_link) - for neural classification with DistilBERT and the last 50% of the BioASQ10b training data
 
-* task8b_distilbert_alldata_model_32.pt - for neural classification with DistilBERT and all BioASQ10b training data
+* [`task10b_distilbert_alldata_model_32.pt`](https://drive.google.com/file/d/1kmz2xpqCF7u0TRYAdUUYK1OAzOnNoGV2/view?usp=share_link) - for neural classification with DistilBERT and all BioASQ10b training data
 
 
 ### DistilBERT
